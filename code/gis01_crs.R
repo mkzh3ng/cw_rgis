@@ -41,7 +41,8 @@ sf_quakes <- df_quakes %>%
   st_as_sf(coords = c("long","lat"),
            crs = 4326)
 
-mapview(sf_quakes)
+mapview(sf_quakes,
+        zcol = "mag")
 
 sf_ft_quakes <- sf_quakes %>% 
   slice(c(1,2))
